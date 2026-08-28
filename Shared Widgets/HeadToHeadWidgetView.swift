@@ -279,11 +279,11 @@ extension HeadToHeadWidgetView {
                     HStack(alignment: .top) {
                         avatarImageView(for: campaign1 ?? sampleCampaign)
                         if(campaign1?.id == winner?.id) {
-                            Image(.crownPixel)
-                                .font(.system(size: 30))
-                                .imageScale(.large)
-                                .foregroundStyle(Theme.current.accentColor)
-                                .background(Circle().fill(.white).blur(radius: 30))
+                            Image(.h2HWinner1)
+//                                .font(.system(size: 30))
+//                                .imageScale(.large)
+//                                .foregroundStyle(Theme.current.accentColor)
+//                                .background(Circle().fill(.white).blur(radius: 30))
                         }
                     }
                     GroupBox {
@@ -320,11 +320,11 @@ extension HeadToHeadWidgetView {
                 VStack(alignment: .trailing) {
                     HStack(alignment: .top) {
                         if(campaign2?.id == winner?.id) {
-                            Image(.crownPixel)
-                                .font(.system(size: 30))
-                                .imageScale(.large)
-                                .foregroundStyle(Theme.current.accentColor)
-                                .background(Circle().fill(.white).blur(radius: 30))
+                            Image(.h2HWinner2)
+//                                .font(.system(size: 30))
+//                                .imageScale(.large)
+//                                .foregroundStyle(Theme.current.accentColor)
+//                                .background(Circle().fill(.white).blur(radius: 30))
                         }
                         avatarImageView(for: campaign2 ?? sampleCampaign)
                     }
