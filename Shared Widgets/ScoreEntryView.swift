@@ -103,8 +103,9 @@ struct ScoreEntryView: View {
                         GridRow {
                             ZStack(alignment: .bottomLeading) {
                                 Color.clear
-                                Image(stephenIsWinning ? .stephenFighting2025 : .stephenSuit2025)
+                                Image(.stephen2026)
                                     .resizable()
+                                    .scaleEffect(x:-1,y:1)
                                     .aspectRatio(contentMode: .fit)
                                     .frame(height: imageHeight)
                                     .padding()
@@ -122,8 +123,9 @@ struct ScoreEntryView: View {
                             }
                             ZStack(alignment: .topTrailing) {
                                 Color.clear
-                                Image(mykeIsWinning ? .mykeFighting2025 : .mykeSuit2025)
+                                Image(.myke2026)
                                     .resizable()
+                                    .scaleEffect(x:-1,y:1)
                                     .aspectRatio(contentMode: .fit)
                                     .frame(height: imageHeight)
                                     .padding()
@@ -133,7 +135,7 @@ struct ScoreEntryView: View {
                                     .minimumScaleFactor(0.5)
                                     .multilineTextAlignment(.center)
                                     .lineLimit(1)
-                                    .foregroundColor(WidgetAppearance.mykeLights),
+                                    .foregroundColor(Theme.current.accentColor),
                                           color: .black)
                                     .padding(4)
                                     .padding(.leading, 10)
@@ -201,7 +203,7 @@ struct ScoreEntryView: View {
                                 .minimumScaleFactor(0.5)
                                 .multilineTextAlignment(.center)
                                 .lineLimit(1)
-                                .foregroundColor(WidgetAppearance.mykeLights),
+                                .foregroundColor(Theme.current.accentColor),
                                       color: .black)
                             Image(entry.score.stephen.score < entry.score.myke.score ? .mykeFighting2025 : .mykeSuit2025)
                                 .resizable()
@@ -223,7 +225,7 @@ struct ScoreEntryView: View {
         .ignoresSafeArea()
         .background {
             if(self.renderingMode == .fullColor) {
-                LinearGradient(colors: WidgetAppearance.stephen.backgroundColors, startPoint: .top, endPoint: .bottom)
+                LinearGradient(colors: WidgetAppearance.stjude.backgroundColors, startPoint: .top, endPoint: .bottom)
             }
         }
         .dynamicTypeSize(.medium)
@@ -303,7 +305,27 @@ struct ScoreEntryView: View {
     }
 }
 
-#Preview(as: .accessoryRectangular, widget: {
+#Preview(as: .systemMedium, widget: {
+    ScoreWidget()
+}, timeline: {
+    ScoreEntry(date: .now, score: Score(myke: .init(score: 233), stephen: .init(score: 231)))
+})
+#Preview(as: .systemLarge, widget: {
+    ScoreWidget()
+}, timeline: {
+    ScoreEntry(date: .now, score: Score(myke: .init(score: 233), stephen: .init(score: 231)))
+})
+#Preview(as: .systemSmall, widget: {
+    ScoreWidget()
+}, timeline: {
+    ScoreEntry(date: .now, score: Score(myke: .init(score: 233), stephen: .init(score: 231)))
+})
+#Preview(as: .systemExtraLarge, widget: {
+    ScoreWidget()
+}, timeline: {
+    ScoreEntry(date: .now, score: Score(myke: .init(score: 233), stephen: .init(score: 231)))
+})
+#Preview(as: .accessoryCircular, widget: {
     ScoreWidget()
 }, timeline: {
     ScoreEntry(date: .now, score: Score(myke: .init(score: 233), stephen: .init(score: 231)))
