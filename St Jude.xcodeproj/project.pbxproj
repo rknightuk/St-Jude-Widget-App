@@ -303,6 +303,7 @@
 				Styles/PrimaryButtonStyle.swift,
 				Theming/BackgroundTheming.swift,
 				Theming/ButtonTheming.swift,
+				Theming/ColorsTheming.swift,
 				Theming/GroupBoxTheming.swift,
 				Theming/ImageTheming.swift,
 				Theming/Theme.swift,
@@ -315,6 +316,7 @@
 				Views/App/Themes/2025/SkyView2025.swift,
 				Views/App/Themes/2025/StandingThrowingView2025.swift,
 				Views/App/Themes/2025/TiledArenaFloorView.swift,
+				Views/App/Themes/2026/Colors2026.swift,
 				Views/App/Themes/2026/LandscapeView2026.swift,
 				Views/Shared/ProgressBar.swift,
 				Views/Shared/ScaledNinePartImage.swift,
@@ -346,8 +348,10 @@
 				Networking/Model.swift,
 				Networking/TiltifyAPIClient.swift,
 				Networking/TiltifyAPIClientModels.swift,
+				Theming/ColorsTheming.swift,
 				Theming/Theme.swift,
 				Views/App/Other/EasterEggs/EasterEggImage.swift,
+				Views/App/Themes/2026/Colors2026.swift,
 			);
 			target = 63BFF19A26D5D37C0023263D /* Intents Extension */;
 		};
@@ -393,6 +397,7 @@
 				Styles/PrimaryButtonStyle.swift,
 				Theming/BackgroundTheming.swift,
 				Theming/ButtonTheming.swift,
+				Theming/ColorsTheming.swift,
 				Theming/GroupBoxTheming.swift,
 				Theming/ImageTheming.swift,
 				Theming/Theme.swift,
@@ -405,6 +410,7 @@
 				Views/App/Themes/2025/SkyView2025.swift,
 				Views/App/Themes/2025/StandingThrowingView2025.swift,
 				Views/App/Themes/2025/TiledArenaFloorView.swift,
+				Views/App/Themes/2026/Colors2026.swift,
 				Views/App/Themes/2026/LandscapeView2026.swift,
 				Views/Shared/ProgressBar.swift,
 				Views/Shared/ScaledNinePartImage.swift,

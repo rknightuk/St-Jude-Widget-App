@@ -45,6 +45,10 @@ extension WidgetAppearance {
     static let jasonLights = Color.rgb(159, 117, 237)
     static let caseyLights = Color.rgb(68, 232, 244)
     
+    // 2026
+    
+    static let primaryRed = Color.from256bit(red: 0xC1, green: 0x0F, blue: 0x3A)
+    
     static let allCases: [WidgetAppearance] = [
         .stjude,
         .stjudetrueblack,
@@ -53,10 +57,6 @@ extension WidgetAppearance {
         .yellow,
         .stephen,
         .myke,
-        .kathy,
-        .brad,
-        .jason,
-        .casey,
     ]
     
     var name: String {
@@ -72,17 +72,17 @@ extension WidgetAppearance {
         case .yellow:
             return "Relay Gold"
         case .stephen:
-            return "Stephen's Suit"
+            return "Stephen's Shirt"
         case .myke:
-            return "Myke's Suit"
-        case .kathy:
-            return "Kathy's Suit"
-        case .brad:
-            return "Brad's Suit"
-        case .jason:
-            return "Jason's Suit"
-        case .casey:
-            return "Casey's Suit"
+            return "Myke's Shirt"
+//        case .kathy:
+//            return "Kathy's Suit"
+//        case .brad:
+//            return "Brad's Suit"
+//        case .jason:
+//            return "Jason's Suit"
+//        case .casey:
+//            return "Casey's Suit"
         default:
             return "Unknown"
         }
@@ -94,18 +94,22 @@ extension WidgetAppearance {
         case .yellow:
             return .black
             
-        case .stephen:
-            return Self.stephenLights
         case .myke:
-            return Self.mykeLights
-        case .kathy:
-            return Self.kathyLights
-        case .brad:
-            return Self.bradLights
-        case .jason:
-            return Self.jasonLights
-        case .casey:
-            return Self.caseyLights
+            return Theme.current.colors.mykeSecondary
+        case .stephen:
+            return Theme.current.colors.stephenSecondary
+//        case .stephen:
+//            return Self.stephenLights
+//        case .myke:
+//            return Self.mykeLights
+//        case .kathy:
+//            return Self.kathyLights
+//        case .brad:
+//            return Self.bradLights
+//        case .jason:
+//            return Self.jasonLights
+//        case .casey:
+//            return Self.caseyLights
             
         default:
             return .white
@@ -117,19 +121,22 @@ extension WidgetAppearance {
             
         case .yellow:
             return .black
-            
-        case .stephen:
-            return Self.stephenLights
         case .myke:
-            return Self.mykeLights
-        case .kathy:
-            return Self.kathyLights
-        case .brad:
-            return Self.bradLights
-        case .jason:
-            return Self.jasonLights
-        case .casey:
-            return Self.caseyLights
+            return Theme.current.colors.mykeSecondary
+        case .stephen:
+            return Theme.current.colors.stephenSecondary
+//        case .stephen:
+//            return Self.stephenLights
+//        case .myke:
+//            return Self.mykeLights
+//        case .kathy:
+//            return Self.kathyLights
+//        case .brad:
+//            return Self.bradLights
+//        case .jason:
+//            return Self.jasonLights
+//        case .casey:
+//            return Self.caseyLights
             
         case .relay:
             return Self.relayYellow
@@ -146,7 +153,7 @@ extension WidgetAppearance {
         case .stjude, .stjudetrueblack:
             return Self.relayYellow
         default:
-            return Self.stjudeRed
+            return Self.primaryRed
         }
     }
     
@@ -155,9 +162,13 @@ extension WidgetAppearance {
             
         case .yellow:
             return [Self.stephenYellow, Self.stephenYellow.darker(by: 5)]
+        case .myke:
+            return [Theme.current.colors.myke, Theme.current.colors.myke.darker(by:5)]
+        case .stephen:
+            return [Theme.current.colors.stephen,Theme.current.colors.stephen.darker(by: 5)]
             
-        case .stephen, .myke, .kathy, .brad, .jason, .casey:
-            return [Self.suitColourLight, Self.suitColourDark]
+//        case .stephen, .myke, .kathy, .brad, .jason, .casey:
+//            return [Self.suitColourLight, Self.suitColourDark]
             
         case .relaytrueblack:
             return [Color.black]
@@ -180,9 +191,9 @@ extension WidgetAppearance {
     var textColor: Color {
         switch self {
         case .stephen:
-            return .black
+            return Theme.current.colors.stephenSecondary
         case .myke:
-            return .white
+            return Theme.current.colors.mykeSecondary
         default:
             return Theme.current.contentColorForAccent
         }

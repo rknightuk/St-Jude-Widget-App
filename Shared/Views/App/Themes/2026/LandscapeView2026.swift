@@ -14,16 +14,14 @@ struct LandscapeView2026: View {
     @State private var showBuildings: Bool
     
     var body: some View {
+        ZStack {
+            Image(.building2026)
+                .resizable()
+                .aspectRatio(contentMode: .fit)
+                .scaleEffect(x: 1.1, y: 1.1)
+                .offset(y: -10)
+                .padding(.top)
         if self.forMainScreen {
-            ZStack {
-                if showBuildings {
-                    Image(.building2026)
-                        .resizable()
-                        .aspectRatio(contentMode: .fit)
-                        .scaleEffect(x: 1.1, y: 1.1)
-                        .offset(y: -10)
-                        .padding(.top)
-                }
                 HStack {
                     Spacer()
                     EasterEggImage(content: {
